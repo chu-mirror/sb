@@ -1,4 +1,4 @@
-# sb(ScriBt)
+# sb(ScriBo)
 A framework for vi's configuring.
 
 ## install
