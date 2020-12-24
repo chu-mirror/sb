@@ -1,17 +1,17 @@
-## sb(ScriBt)
+# sb(ScriBt)
 A framework for vi's configuring.
 
-# install
+## install
 ```
 $ make clean && make
 # make install
 ```
-# uninstall 
+## uninstall 
 ```
 # make uninstall
 ```
 
-# Description
+## Description
 
 I'm tired of playing with editor,
 vim? emacs? vs code? whatever I use,
@@ -44,7 +44,7 @@ in order to reduce pains of typing and maintaining.
 The concept can be implemented in other editors, 
 even easier.
 
-# About traditional vi 
+### About traditional vi 
 
 I have been working with vi for months.
 At first, it seemed strangely inconvenient.
