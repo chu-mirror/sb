@@ -1,0 +1,24 @@
+
+-init:
+	se redraw ic aw exrc noremap
+
+-macro:
+
+building of structured text
+
+	new_block_brace		'{}O	'
+	comment_dq_to_sharp	':?^"$?+1,.-1s/^/# /:\?d:\/d' 
+	dq_to_bq		':?^"$?+1,.-1s/^/\> /:\?d:\/d'
+
+new information from enviroment
+
+	insert_date		':r! date +"\%d \%B \%y"kJA'
+	exit_with_save		':wq'
+
+-abbre:
+
+my name
+	mzz	'Maeda Chu'
+	
+-map:
+	q	exit_with_save

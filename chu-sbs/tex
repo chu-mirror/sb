@@ -1,0 +1,23 @@
+
+# Macro
+preview_pdf='map #5 :!pdftex %; mupdf-gl $(basename % .tex).pdf'
+
+tex_mode=NO
+use_tex_mode() {
+	if [ $tex_mode = YES ]; then
+		return 0
+	fi
+	tex_mode=YES
+
+	settings="$settings \
+$struct_text \
+"
+
+	macros="$macros\
+|$preview_pdf\
+"
+
+	abbres="$abbres\
+"
+}
+

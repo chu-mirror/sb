@@ -1,0 +1,25 @@
+
+# Macro
+preview_pdf_web='map #5 :!cweave %&& pdftex $(basename % .w).tex&& mupdf-gl $(basename % .w).pdf'
+tangle='map #6 :!ctangle %'
+
+web_mode=NO
+use_web_mode() {
+	if [ $web_mode = YES ]; then
+		return 0
+	fi
+	web_mode=YES
+
+	settings="$settings \
+$struct_webt \
+"
+
+	macros="$macros\
+|$tangle\
+|$preview_pdf_web\
+"
+
+	abbres="$abbres\
+"
+}
+

@@ -1,0 +1,24 @@
+-macro:
+	make_this_file		':!make $(basename % .c).o'
+
+	create_definition	':.co$f af;xa'
+
+-map:
+
+	#5	compile
+	CTRL_C	create_definition
+
+-mapi:
+	CTRL_N	new_block_brace
+
+-abbre:
+
+	inc	'#include'
+	iio	'#include <stdio.h>'
+	ili	'#include <stdlib.h>'
+	iuni	'#include <unistd.h>'
+	isr	'#include <string.h>'
+	isys	'#include <sys'
+
+	mian	'intmain(int argc, char *argv[])'
+
