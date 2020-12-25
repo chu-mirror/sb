@@ -57,14 +57,14 @@ when cursor placed at "r",
 the way I'd been used to, 
 baskspace with a preceding "i",
 was just banned.
-Although it's a bad practice should be avoid,
+Although it's a bad practice should be avoided,
 being able to do that seems better than not after all.
 There are a lot besides this,
 one level undo, no syntax highlighting,
 no auto-completion, etc...
 
 But after the months of using,
-I benifitted from all these shortcoming in fact.
+I benefitted from all these shortcoming in fact.
 For example, 
 the lack of syntax highlighting and auto-completion forced
 better organization of text and naming of new words.
