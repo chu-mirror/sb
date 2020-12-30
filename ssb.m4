@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sb_confs=SB_CONFS
+sb_confs=$HOME/SB_CONFS
 
 file_list=""
 for arg in $@; do
