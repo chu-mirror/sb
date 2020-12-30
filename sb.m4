@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sb_confs=SB_CONFS
+sb_confs=$HOME/SB_CONFS
 sb_include=SB_INCLUDE
 
 vi_ex=vi
@@ -12,34 +12,37 @@ file=$(basename $1)
 # the suffix of the file
 suf=$(expr $file : '[[:graph:]]*\.\([[:alnum:]]*\)')
 
-# select the configuration
-conf=''
+# use a temporary file to construct configuration
+conf=$(mktemp)
+
+# search a file named base in $sb_confs first
+[ -f $sb_confs/base ] && cat $sb_confs/base > $conf
+
 if [ -z $suf ]; then
-	[ -f $sb_confs/$file ] && conf=$sb_confs/$file
+	[ -f $sb_confs/$file ] && cat $sb_confs/$file >> $conf
 else
-	[ -f $sb_confs/$suf ] && conf=$sb_confs/$suf
+	[ -f $sb_confs/$suf ] && cat $sb_confs/$suf >> $conf
 fi
 
-# create a temp file for in-file configuratoins
-tmp_conf=$(mktemp /tmp/sb-conf-XXXXXX)
+# if you prefer .sbrc than .exrc
+[ -f .sbrc ] && cat .sbrc >> $conf
 
-sed -n -e '
-/sb-start/,/sb-end/p
-' $1 > $tmp_conf
+# extract configuration from file being edited
+[ -f $1 ] && sed -n -f $sb_include/infile-conf.sed $1 >> $conf
 
 # translate the conf to ex commands,
 # which understood by vi.
-conf="$(cat $sb_confs/base $conf $tmp_conf \
+conf_ex="$(cat $conf \
 	| sed -n -f $sb_include/conf-macro1.sed \
 	| sed -f $sb_include/conf-macro2.sed \
-	| m4 $sb_include/macro-ex.m4 - $sb_include/ex.m4)"
+	| m4 $sb_include/macro-ex.m4 - )"
 
-rm $tmp_conf
+rm $conf
 
 debug=DEBUG
 if [ $debug = 'YES' ]; then
-	echo "$conf" | tr '|' '\n' > ~/.exrc
+	echo "$conf_ex" | tr '|' '\n' > ~/.exrc
 	env EXINTI="se exrc" $vi_ex $@
 else
-	env EXINIT="$conf|$EXINIT" $vi_ex $@
+	env EXINIT="se redraw|$conf_ex|$EXINIT" $vi_ex $@
 fi

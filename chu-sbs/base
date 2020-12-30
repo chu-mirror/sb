@@ -2,13 +2,43 @@
 -init:
 	se redraw ic aw exrc noremap
 
--macro:
+-def:
+
+the control characters
+
+	CTRL_A		''
+	CTRL_B		''
+	CTRL_C		''
+	CTRL_D		''
+	CTRL_E		''
+	CTRL_F		''
+	CTRL_G		''
+	CTRL_H		''
+	CTRL_K		''
+	CTRL_L		''
+	CTRL_M		''
+	CTRL_N		''
+	CTRL_O		''
+	CTRL_P		''
+	CTRL_R		''
+	CTRL_T		''
+	CTRL_U		''
+	CTRL_V		''
+	CTRL_W		''
+	CTRL_X		''
+	CTRL_Y		''
+	CTRL_Z		''
 
 building of structured text
 
 	new_block_brace		'{}O	'
-	comment_dq_to_sharp	':?^"$?+1,.-1s/^/# /:\?d:\/d' 
-	dq_to_bq		':?^"$?+1,.-1s/^/\> /:\?d:\/d'
+
+a class of special operations that
+reshape a block of text
+delineated by a double quotation 
+and current cursor's position
+
+	to_sharp		':?^"$?+1,.-1s/^/# /:\?d:\/d' 
 
 new information from enviroment
 
@@ -22,3 +52,4 @@ my name
 	
 -map:
 	q	exit_with_save
+

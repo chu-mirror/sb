@@ -1,4 +1,4 @@
--macro:
+-def:
 	insert_date		':r! date +"\%d \%B \%y"kJA'
 	show_formatted		':w:!less %'
 

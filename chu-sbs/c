@@ -1,4 +1,7 @@
--macro:
+-init:
+	se ai
+
+-def:
 	make_this_file		':!make $(basename % .c).o'
 
 	create_definition	':.co$f af;xa'

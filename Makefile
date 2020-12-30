@@ -4,15 +4,15 @@ BINDIR = $(PREFIX)/bin
 INCLUDE = $(PREFIX)/include
 
 SB_INCLUDE = $(INCLUDE)/sb
-SB_CONFS = \$$HOME/.sbs
+SB_CONFS = .sbs # path relative to $HOME
 
 SB_CONFS_EXAMPLE = chu-sbs
 
 DEBUG = NO
 
 ALL = sb sbv ssb 
-SCRIPTS = conf-macro1.sed conf-macro2.sed \
-	macro-ex.m4 ex.m4
+SCRIPTS = conf-macro1.sed conf-macro2.sed infile-conf.sed \
+	macro-ex.m4 
 
 .POSIX:
 .SUFFIXES:
@@ -35,7 +35,7 @@ install:
 	cp $(SCRIPTS) $(SB_INCLUDE)
 
 install-example-confs:
-	cp -r $(SB_CONFS_EXAMPLE) $(SB_CONFS)
+	cp -r $(SB_CONFS_EXAMPLE) $(HOME)/$(SB_CONFS)
 
 clean:
 	rm -f $(ALL)

@@ -1,3 +1,9 @@
+-init:
+	se ai
+
+-mapi:
+	#1	insert_date
+
 -abbre:
 	ish	'#/bin/sh'
 
