@@ -1,13 +1,16 @@
 #!/bin/sh
 
+define(`cat_to_conf', `[ -f $1 ] && cat $1 >> $conf')dnl
+
 sb_confs=$HOME/SB_CONFS
 sb_include=SB_INCLUDE
 
 vi_ex=vi
 [ $0 = 'sbv' ] && vi_ex=view
 
-# get the basename of the first argument
+# Analyse the first argument
 file=$(basename $1)
+dir=$(dirname $1)
 
 # the suffix of the file
 suf=$(expr $file : '[[:graph:]]*\.\([[:alnum:]]*\)')
@@ -16,16 +19,16 @@ suf=$(expr $file : '[[:graph:]]*\.\([[:alnum:]]*\)')
 conf=$(mktemp)
 
 # search a file named base in $sb_confs first
-[ -f $sb_confs/base ] && cat $sb_confs/base > $conf
+cat_to_conf($sb_confs/base)
 
 if [ -z $suf ]; then
-	[ -f $sb_confs/$file ] && cat $sb_confs/$file >> $conf
+	cat_to_conf($sb_confs/$file)
 else
-	[ -f $sb_confs/$suf ] && cat $sb_confs/$suf >> $conf
+	cat_to_conf($sb_confs/$suf)
 fi
 
 # if you prefer .sbrc than .exrc
-[ -f .sbrc ] && cat .sbrc >> $conf
+cat_to_conf($dir/.sbrc)
 
 # extract configuration from file being edited
 [ -f $1 ] && sed -n -f $sb_include/infile-conf.sed $1 >> $conf
