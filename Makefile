@@ -44,6 +44,10 @@ uninstall:
 	cd $(BINDIR) && rm -f $(ALL)
 	rm -rf $(SB_INCLUDE)
 
+distribution:
+	rm -rf $(SB_CONFS_EXAMPLE)
+	cp -r ~/$(SB_CONFS) $(SB_CONFS_EXAMPLE)
+
 sbv: sb
 	ln -s sb sbv
 

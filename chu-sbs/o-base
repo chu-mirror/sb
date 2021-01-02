@@ -33,6 +33,15 @@ building of structured text
 
 	new_block_brace		'{}O	'
 
+building of a sentence
+
+	equal_to		' = '
+	parenthesis		'()i'
+
+movement
+	
+	go_out_parenthesis	'f)a'
+
 a class of special operations that
 reshape a block of text
 delineated by a double quotation 
@@ -43,6 +52,9 @@ and current cursor's position
 new information from enviroment
 
 	insert_date		':r! date +"\%d \%B \%y"kJA'
+	read_from		':r! '
+
+exit
 	exit_with_save		':wq'
 
 -abbre:
@@ -52,4 +64,11 @@ my name
 	
 -map:
 	q	exit_with_save
+
+-mapi:
+	CTRL_R	read_from
+	CTRL_E	equal_to
+	CTRL_P	parenthesis
+	CTRL_L	go_out_parenthesis
+
 

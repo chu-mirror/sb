@@ -19,12 +19,12 @@ suf=$(expr $file : '[[:graph:]]*\.\([[:alnum:]]*\)')
 conf=$(mktemp)
 
 # search a file named base in $sb_confs first
-cat_to_conf($sb_confs/base)
+cat_to_conf($sb_confs/o-base)
 
 if [ -z $suf ]; then
-	cat_to_conf($sb_confs/$file)
+	cat_to_conf($sb_confs/f-$file)
 else
-	cat_to_conf($sb_confs/$suf)
+	cat_to_conf($sb_confs/s-$suf)
 fi
 
 # if you prefer .sbrc than .exrc
