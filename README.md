@@ -18,7 +18,7 @@ vim? emacs? vs code? whatever I use,
 the basic things stay the same:
 I want to edit something,
 and to do something when I'm editing.
-What I reflect on a pattern of text,
+What I react to a pattern of text,
 what I want to do to interact with enviroment,
 are all the things ought to be decided by myself.
 If this goal was achieved, 
