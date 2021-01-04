@@ -1,8 +1,4 @@
 -def:
-	preview_pdf_web		':!cweave %&& pdftex $(basename % .w).tex&& mupdf-gl $(basename % .w).pdf'
+	preview			':!cweave %&& pdftex $(basename % .w).tex&& mupdf-gl $(basename % .w).pdf'
 	tangle			':!ctangle %'
-
--map:
-	#5	tangle
-	#6	preview_pdf_web
 

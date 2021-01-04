@@ -4,11 +4,6 @@
 -def:
 	equal_to	'='
 
--mapi:
-	#1	insert_date
-	CTRL_C	to_sharp
-	CTRL_E	equal_to
-
 -abbre:
 	ish	'#/bin/sh'
 

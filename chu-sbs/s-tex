@@ -2,7 +2,6 @@
 	se ai
 
 -def:
-	preview_pdf		':!pdftex %; mupdf-gl $(basename % .tex).pdf'
+	preview		':!pdftex %; mupdf-gl $(basename % .tex).pdf'
+	brackets	'braces'
 
--map:
-	#6	preview_pdf

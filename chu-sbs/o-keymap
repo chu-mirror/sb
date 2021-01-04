@@ -1,0 +1,18 @@
+-def:
+	open_new_line		'o'
+
+-map:
+	#5	compile
+	#6	preview
+
+	CTRL_C	comment_out
+
+-mapi:
+	#1	insert_date
+
+	CTRL_C	comment
+	CTRL_E	equal_to
+	CTRL_L	next_punctuation
+	CTRL_N	new_block
+	CTRL_O	open_new_line
+	CTRL_P	brackets

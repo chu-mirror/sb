@@ -33,6 +33,9 @@ cat_to_conf($dir/.sbrc)
 # extract configuration from file being edited
 [ -f $1 ] && sed -n -f $sb_include/infile-conf.sed $1 >> $conf
 
+# load keymap 
+cat_to_conf($sb_confs/o-keymap)
+
 # translate the conf to ex commands,
 # which understood by vi.
 conf_ex="$(cat $conf \
