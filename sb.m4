@@ -11,20 +11,28 @@ conf_macro() {
 		| sed -f $sb_include/conf-macro2.sed
 }
 
+macro_ex() {
+	cat $1 | m4 $sb_include/macro-ex.m4 - 
+}
+
 conf_ex() {
-	conf_macro $1 | m4 $sb_include/macro-ex.m4 - 
+	conf_macro $1 | macro_ex
 }
 
 cat_to_conf() {
 	[ -f $1 ] && cat $1 >> $conf
 }
 
+case $1 in
+	'-e') macro_ex $2; exit 0 ;;
+	'-m') conf_macro $2; exit 0 ;;
+	'-t') do_not_edit=YES; shift ;;
+	*) 
+esac
+
 vi_ex=vi
 # if reading instead of writing
 [ $(basename $0) = 'sbv' ] && vi_ex=view
-
-# if sbm is executed
-[ $(basename $0) = 'sbm' ] && conf_macro $1 && exit 0
 
 # Analyse the first argument
 file=$(basename $1)
@@ -61,10 +69,9 @@ ex="$(conf_ex $conf)"
 # delete temporary file
 rm $conf
 
-debug=DEBUG
-if [ $debug = 'YES' ]; then
-	echo "$ex" | tr '|' '\n' > ~/.exrc
-	env EXINTI="se exrc" $vi_ex $@
+if [ $do_not_edit = 'YES' ]; then
+	echo "$ex" | tr '|' '\n'
 else
 	env EXINIT="se redraw|$ex|$EXINIT" $vi_ex $@
 fi
+

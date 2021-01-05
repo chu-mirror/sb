@@ -10,7 +10,7 @@ SB_CONFS_EXAMPLE = chu-sbs
 
 DEBUG = NO
 
-ALL = sb sbv ssb sbm
+ALL = sb sbv ssb 
 SCRIPTS = conf-macro1.sed conf-macro2.sed infile-conf.sed \
 	macro-ex.m4 
 
@@ -51,5 +51,3 @@ distribution:
 sbv: sb
 	ln -s sb sbv
 
-sbm: sb
-	ln -s sb sbm
