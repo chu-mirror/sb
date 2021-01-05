@@ -2,6 +2,7 @@
 PREFIX = /usr/local
 BINDIR = $(PREFIX)/bin
 INCLUDE = $(PREFIX)/include
+MANDIR = $(PREFIX)/share/man
 
 SB_INCLUDE = $(INCLUDE)/sb
 SB_CONFS = .sbs # path relative to $HOME
@@ -29,10 +30,14 @@ SCRIPTS = conf-macro1.sed conf-macro2.sed infile-conf.sed \
 
 all: $(ALL)
 
-install: 
+install: install-man
 	cp -P $(ALL) $(BINDIR)
 	[ -d $(SB_INCLUDE) ] || mkdir -p $(SB_INCLUDE)
 	cp $(SCRIPTS) $(SB_INCLUDE)
+
+install-man:
+	[ -d $(MANDIR)/man1 ] || mkdir -p $(MANDIR)/man1
+	cp sb.1 $(MANDIR)/man1
 
 install-example-confs:
 	cp -r $(SB_CONFS_EXAMPLE) $(HOME)/$(SB_CONFS)
@@ -50,4 +55,5 @@ distribution:
 
 sbv: sb
 	ln -s sb sbv
+
 

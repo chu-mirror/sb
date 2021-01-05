@@ -6,8 +6,7 @@ sb_include=SB_INCLUDE
 
 
 conf_macro() {
-	cat $1 \
-		| sed -n -f $sb_include/conf-macro1.sed \
+	cat $1  | sed -n -f $sb_include/conf-macro1.sed \
 		| sed -f $sb_include/conf-macro2.sed
 }
 
