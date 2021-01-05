@@ -1,4 +1,7 @@
+-include:
+	~/.sbs/s-c
+	~/.sbs/s-tex
 -def:
-	preview			':!cweave %&& pdftex $(basename % .w).tex&& mupdf-gl $(basename % .w).pdf'
 	tangle			':!ctangle %'
+
 

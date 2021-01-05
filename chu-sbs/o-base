@@ -35,6 +35,8 @@ punctuations,
 all characters except alphabets, underscore, blank, tab
 	PUNC		'[^a-zA-Z_ 	]'
 
+## editing
+
 # building of structured text
 
 	new_block_brace		'{}O	'
@@ -76,9 +78,15 @@ and current cursor's position
 
 	comment_out		'shell_comment_out'
 
+## interaction with enviroment
+
+	compile			':!make'
+	preview			':!prevw %'
+
 # new information from enviroment
 
 	insert_date		':r! date +"\%d \%B \%y"kJA'
+
 
 -abbre:
 

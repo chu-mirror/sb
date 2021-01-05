@@ -2,6 +2,5 @@
 	se ai
 
 -def:
-	preview		':!pdftex %; mupdf-gl $(basename % .tex).pdf'
 	brackets	'braces'
 
