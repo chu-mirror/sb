@@ -3,4 +3,6 @@
 
 -def:
 	brackets	'braces'
+	new_block	'$$O$$'
+	comment_type	'tex'
 

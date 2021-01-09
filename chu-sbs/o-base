@@ -45,15 +45,26 @@ all characters except alphabets, underscore, blank, tab
 the default type of blocks
 	new_block		'new_block_indent'
 
+# comment out a block of text
+
+a class of special operations that
+comment out a block of text
+delineated by a pair of double quotations
+
+	shell_comment_out	':?^"$?+1,\/-1s/^/# /:\?d:\/d' 
+	tex_comment_out		':?^"$?+1,\/-1s/^/% /:\?d:\/d' 
+	c_comment_out		':?^"$?+1,\/-1s/^/ */:\?s/"/\/*:\/s/"/*\/' 
+
 # building of a sentence
 
 	equal_to		' = '
 
 	c_comment		'/*  */hhi'
 	shell_comment		'# '
+	tex_comment		'% '
 
 the default type of commenting
-	comment			'shell_comment'
+	comment_type		'shell'
 
 	parentheses		'()i'
 	braces			'{}i'
@@ -65,18 +76,6 @@ the default type of brackets
 	
 	next_punctuation	'/PUNCa'
 	opposite		'%a'
-
-# comment out a block of text
-
-a class of special operations that
-comment out a block of text
-delineated by a double quotation 
-and current cursor's position
-
-	shell_comment_out	':?^"$?+1,.-1s/^/# /:\?d:\/d' 
-	c_comment_out		':.s/$/*\/:?^"$?s/"/\/*//*\/'
-
-	comment_out		'shell_comment_out'
 
 ## interaction with enviroment
 

@@ -1,9 +1,2 @@
--def:
-	insert_date		':r! date +"\%d \%B \%y"kJA'
-	show_formatted		':w:!less %'
 
-	preview			'show_formatted'
-
--mapi:
-	#1	insert_date
 

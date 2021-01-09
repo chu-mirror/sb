@@ -1,5 +1,7 @@
 -def:
 	open_new_line		'o'
+	comment			'format(`%s_%s', comment_type, `comment')'
+	comment_out		'format(`%s_%s', comment_type, `comment_out')'
 
 -map:
 	#5	compile

@@ -1,7 +1,6 @@
 -include:
 	~/.sbs/s-c
 	~/.sbs/s-tex
+
 -def:
-	tangle			':!ctangle %'
-
-
+	new_block	'new_block_brace'
