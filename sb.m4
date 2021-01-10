@@ -6,16 +6,16 @@ sb_include=SB_INCLUDE
 
 
 conf_macro() {
-	cat $1  | sed -n -f $sb_include/conf-macro1.sed \
+	sed -n -f $sb_include/conf-macro1.sed \
 		| sed -f $sb_include/conf-macro2.sed
 }
 
 macro_ex() {
-	cat $1 | m4 $sb_include/macro-ex.m4 - 
+	m4 $sb_include/macro-ex.m4 - 
 }
 
 conf_ex() {
-	conf_macro $1 | macro_ex
+	conf_macro | macro_ex
 }
 
 cat_to_conf() {
@@ -23,8 +23,8 @@ cat_to_conf() {
 }
 
 case $1 in
-	'-e') macro_ex $2; exit 0 ;;
-	'-m') conf_macro $2; exit 0 ;;
+	'-e') shift; cat $@ | macro_ex; exit 0 ;;
+	'-m') shift; cat $@ | conf_macro; exit 0 ;;
 	'-t') do_not_edit=YES; shift ;;
 	*) 
 esac
@@ -63,7 +63,7 @@ cat_to_conf $sb_confs/o-keymap
 
 # translate the conf to ex commands,
 # which understood by vi.
-ex="$(conf_ex $conf)"
+ex="$(cat $conf | conf_ex)"
 
 # delete temporary file
 rm $conf
