@@ -3,7 +3,8 @@ A framework for vi's configuring.
 
 Make sure you at least know a little
 about m4 for using this framework.
-Configuring under this framework is basicly writing m4 scripts,
+Configuring under this framework is basically writing m4 scripts
+(see chu-sbs for examples, some files contain non-printable characters),
 and this project is not by any means supposed to be robust.
 The traditional vi could be found at 
 [sourceforge](http://ex-vi.sourceforge.net).
