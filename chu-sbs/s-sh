@@ -5,5 +5,5 @@
 	equal_to	'='
 
 -abbre:
-	ish	'#/bin/sh'
+	ish	'#!/bin/sh'
 
