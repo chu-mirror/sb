@@ -1,9 +1,7 @@
 #!/bin/sh
 
-
 sb_confs=$HOME/SB_CONFS
 sb_include=SB_INCLUDE
-
 
 conf_macro() {
 	sed -n -f $sb_include/conf-macro1.sed \
@@ -73,4 +71,9 @@ if [ $do_not_edit = 'YES' ]; then
 else
 	env EXINIT="se redraw|$ex|$EXINIT" $vi_ex $@
 fi
+
+# sb-begin
+# -include:
+# 	~/.sbs/s-sh
+# sb-end
 
