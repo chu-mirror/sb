@@ -3,7 +3,7 @@ C-a		(used by screen)	(used by screen)
 C-b		backward window		
 C-c		*comment out		*comment
 C-d		scroll down		backtab
-C-e		one more line		*equil to
+C-e		one more line		*equal to
 C-f		forward window		
 C-g		':f'			
 C-h		'h'			delete
