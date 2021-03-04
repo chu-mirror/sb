@@ -1,0 +1,82 @@
+character	commond mode		insert mode
+C-a		(used by screen)	(used by screen)
+C-b		backward window		
+C-c		*comment out		*comment
+C-d		scroll down		backtab
+C-e		one more line		*equil to
+C-f		forward window		
+C-g		':f'			
+C-h		'h'			delete
+C-i		TAB			TAB
+C-j		LINEFEED		LINEFEED
+C-k
+C-l		redraw			*next punctuation
+C-m		CR			CR
+C-n		'j'			*new block
+C-o					*open new line
+C-p		'k'			*brackets
+C-q
+C-r
+C-s					*new sentence(.w)
+C-t					insert shiftwidth white
+C-u		scroll up		clear input
+C-v					quote next
+C-w					delete the last word
+C-x
+C-y		one more line above	
+C-z		(used by terminal)	(used by terminal)
+C-[		ESC			ESC
+C-\
+C-]		':ta'			
+a		append
+b		back up a word
+c		change
+d		delete
+e		to end of word
+f		find
+g		
+h		one character left
+i		insert
+j		one line down
+k		one line up
+l		one character right
+m		mark position
+n		next
+o		open new line below
+p		put text after
+q		
+r		replace
+s		change single character
+t		till
+u		undo
+v
+w		advance a word
+x		delete single character
+y		yank
+z		redraw
+A		append at end
+B		back up a word(non-blank sequence)
+C		change to end
+D		delete to end
+E		to end of word(non-blank sequence)
+F		find backwards
+G		go to
+H		home
+I		insert at beginning
+J		join together
+K		
+L		move to the last
+M		middle
+N		previous
+O		open new line above
+P		put text before
+Q		quit to ex mode
+R		replace mode
+S		change whole line
+T		till backwords
+U		undo current line
+V
+W		advance a word(non-blank sequence)
+X		delete before
+Y		yank current line
+

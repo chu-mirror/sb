@@ -1,3 +1,10 @@
 -include:
 	~/.sbs/s-tex
 	~/.sbs/s-c
+
+-def:
+	new_sentence	'@<@>@;hhhi'
+
+-mapi:
+	CTRL_S	new_sentence
+
