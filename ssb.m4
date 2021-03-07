@@ -2,7 +2,11 @@
 
 sb_confs=$HOME/SB_CONFS
 
-sb $sb_confs/$1-$2
+if [ $# -eq '2' ]; then
+	sb $sb_confs/$1-$2
+elif [ $# -eq '1' ]; then
+	sb $sb_confs/$1
+fi
 
 # sb-begin
 # -include:
