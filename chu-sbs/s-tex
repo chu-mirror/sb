@@ -2,7 +2,16 @@
 	se ai
 
 -def:
-	brackets	'braces'
-	new_block	'$$O$$'
+	bracket		'brace'
+	new_block	'$$O$$'
 	comment_type	'tex'
 
+create new field, the same as previous section
+	vertical_bar		'||i'
+	dollar			'$$i'
+
+the default type of field
+	field			'vertical_bar'
+
+-mapi:
+	CTRL_F			field

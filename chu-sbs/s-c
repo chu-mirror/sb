@@ -5,16 +5,30 @@
 override
 	new_block		'new_block_brace'
 	comment_type		'c'
-	brackets		'parentheses'
+	bracket			'parenthese'
 
 -abbre:
 
+includes
 	inc	'#include'
+
+standard library
 	iio	'#include <stdio.h>'
-	ilib	'#include <stdlib.h>'
-	iuni	'#include <unistd.h>'
+	icty	'#include <ctype.h>'
 	istr	'#include <string.h>'
+	imat	'#include <math.h>'
+	ilib	'#include <stdlib.h>'
+	iass	'#include <assert.h>'
+	iarg	'#include <stdarg.h>'
+	ijmp	'#include <stdjmp.h>'
+	isig	'#include <signal.h>'
+	itim	'#include <time.h>'
+	ilim	'#include <limits.h>'
+
+Unix System Interface
+	iuni	'#include <unistd.h>'
 	isys	'#include <sys'
 
+main function
 	mian	'intmain(int argc, char *argv[])'
 

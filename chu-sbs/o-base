@@ -20,7 +20,9 @@
 	CTRL_N		''
 	CTRL_O		''
 	CTRL_P		''
+	CTRL_Q		''
 	CTRL_R		''
+	CTRL_S		''
 	CTRL_T		''
 	CTRL_U		''
 	CTRL_V		''
@@ -69,11 +71,11 @@ the default type of commenting
 	tex_comment		'% '
 
 do not pair parenthese yourself
-	parentheses		'()i'
-	braces			'{}i'
+	parenthese		'()i'
+	brace			'{}i'
 
-the default type of brackets
-	brackets		'parentheses'
+the default type of bracket
+	bracket			'parenthese'
 
 # movements
 	

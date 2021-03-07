@@ -3,7 +3,7 @@
 	~/.sbs/s-c
 
 -def:
-	new_sentence	'@<@>@;hhhi'
+	new_sentence	'@<@>hi'
 
 -mapi:
 	CTRL_S	new_sentence
