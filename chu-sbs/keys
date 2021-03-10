@@ -5,7 +5,7 @@ C-c		*comment out		*comment
 C-d		scroll down		backtab
 C-e		one more line		*equal to
 C-f		forward window		*field(.tex; effect same as *bracket)
-C-g		':f'			
+C-g		':f'			*go to end
 C-h		'h'			delete
 C-i		TAB			TAB
 C-j		LINEFEED		LINEFEED

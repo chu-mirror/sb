@@ -41,8 +41,8 @@ all characters except alphabets, underscore, blank, tab
 
 # building of structured text
 
-	new_block_brace		'{}O	'
-	new_block_indent	'	'
+	new_block_brace		'{}O'
+	new_block_indent	''
 
 the default type of blocks
 	new_block		'new_block_indent'
@@ -81,6 +81,8 @@ the default type of bracket
 	
 	next_punctuation	'/PUNCa'
 	opposite		'%a'
+
+	go_to_end		'A'
 
 ## interaction with enviroment
 
