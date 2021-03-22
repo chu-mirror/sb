@@ -66,7 +66,7 @@ ex="$(cat $conf | conf_ex)"
 # delete temporary file
 rm $conf
 
-if [ $do_not_edit = 'YES' ]; then
+if [ "$do_not_edit" = 'YES' ]; then
 	echo "$ex" | tr '|' '\n'
 else
 	env EXINIT="se redraw|$ex|$EXINIT" $vi_ex $@

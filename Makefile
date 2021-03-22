@@ -40,6 +40,7 @@ install-man:
 	cp sb.1 $(MANDIR)/man1
 
 install-example-confs:
+	cd $(SB_CONFS_EXAMPLE); make
 	cp -r $(SB_CONFS_EXAMPLE) $(HOME)/$(SB_CONFS)
 
 clean:
