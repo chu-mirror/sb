@@ -14,8 +14,10 @@
 
 	CTRL_C	comment
 	CTRL_E	equal_to
+	CTRL_F	field
 	CTRL_G	go_to_end
 	CTRL_L	next_punctuation
 	CTRL_N	new_block
 	CTRL_O	open_new_line
 	CTRL_P	bracket
+	CTRL_S	new_sentence

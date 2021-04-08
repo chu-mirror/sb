@@ -70,12 +70,22 @@ the default type of commenting
 	shell_comment		'# '
 	tex_comment		'% '
 
+new sentence
+	new_sentence		'@<@>hi'
+
 do not pair parenthese yourself
 	parenthese		'()i'
 	brace			'{}i'
 
 the default type of bracket
 	bracket			'parenthese'
+
+create new field, the same as previous section
+	vertical_bar		'||i'
+	dollar			'$$i'
+
+the default type of field
+	field			'vertical_bar'
 
 # movements
 	

@@ -4,7 +4,7 @@ C-b		backward window
 C-c		*comment out		*comment
 C-d		scroll down		backtab
 C-e		one more line		*equal to
-C-f		forward window		*field(.tex; effect same as *bracket)
+C-f		forward window		*field(effect same as *bracket)
 C-g		':f'			*go to end
 C-h		'h'			delete
 C-i		TAB			TAB
@@ -17,7 +17,7 @@ C-o					*open new line
 C-p		'k'			*bracket
 C-q					quote
 C-r
-C-s					*new sentence(.w)
+C-s					*new sentence
 C-t					insert shiftwidth white
 C-u		scroll up		clear input
 C-v					quote next

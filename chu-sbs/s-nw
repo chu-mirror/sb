@@ -1,0 +1,7 @@
+-include:
+	~/.sbs/s-tex
+
+-def:
+	new_sentence	'<<>>hi'
+	field		'[[]]hi'
+
