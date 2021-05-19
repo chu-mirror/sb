@@ -1,0 +1,8 @@
+-init:
+	se ai tabstop=4 shiftwidth=4
+-def:
+	new_block		'<></>:.-1,.s/>/'
+	html_comment_out	'xx_comment_out(`', `s/"/<!--', `s/^"$/-->')'
+	html_comment		'<!--  -->hhhi'
+
+	comment_type	'html'
