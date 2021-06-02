@@ -1,6 +1,6 @@
 
 -init:
-	se redraw ic aw exrc noremap
+	se redraw ic aw exrc noremap ai
 
 -def:
 

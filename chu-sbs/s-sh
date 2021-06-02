@@ -1,6 +1,3 @@
--init:
-	se ai
-
 -def:
 	equal_to	'='
 

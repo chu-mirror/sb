@@ -1,6 +1,3 @@
--init:
-	se ai
-
 -def:
 override
 	new_block		'new_block_brace'
